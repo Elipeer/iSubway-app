@@ -3,7 +3,7 @@
 //  SubWay Map
 //
 //  Created by Eli Peer on 5/4/15.
-//  Copyright (c) 2015 elipeer. All rights reserved.
+//  Copyright (c) 2015 elipeer. All rights reserve.
 //
 
 #import <UIKit/UIKit.h>
