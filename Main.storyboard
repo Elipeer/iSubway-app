@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6QG-w1-54n">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -9,7 +10,6 @@
             <string>CourierNewPS-BoldMT</string>
         </mutableArray>
         <mutableArray key="Helvetica.ttc">
-            <string>Helvetica-Light</string>
             <string>Helvetica-Light</string>
             <string>Helvetica-Light</string>
             <string>Helvetica-Light</string>
@@ -138,7 +138,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you dont see your purchase, tap &quot;Restore&quot; to restore it!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQE-P4-Thk">
                                 <rect key="frame" x="26" y="285" width="268" height="135"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="87G-HI-0bh">
@@ -213,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-Mb-v7H">
-                                <rect key="frame" x="35" y="52" width="251" height="29"/>
+                                <rect key="frame" x="35" y="8" width="251" height="29"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <segments>
                                     <segment title="Regular Map"/>
@@ -224,33 +224,30 @@
                                     <action selector="setmap:" destination="XS9-wO-itR" eventType="valueChanged" id="cxj-yN-5Cy"/>
                                 </connections>
                             </segmentedControl>
-                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOA-pr-HUc">
-                                <rect key="frame" x="0.0" y="502" width="320" height="68"/>
-                                <connections>
-                                    <outlet property="delegate" destination="XS9-wO-itR" id="Izt-OP-lQh"/>
-                                </connections>
-                            </adBannerView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-ea-z3c">
-                                <rect key="frame" x="-4" y="0.0" width="328" height="568"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="568" id="1ll-UR-kvi"/>
-                                </constraints>
+                                <rect key="frame" x="-4" y="0.0" width="328" height="524"/>
                                 <connections>
                                     <outlet property="delegate" destination="XS9-wO-itR" id="mLk-ak-qKh"/>
                                 </connections>
                             </scrollView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="mmT-6b-CJc">
+                                <rect key="frame" x="0.0" y="502" width="480" height="66"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XS9-wO-itR" id="OV8-F4-kr6"/>
+                                </connections>
+                            </adBannerView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.54118653819999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aOA-pr-HUc" firstAttribute="centerX" secondItem="Eex-Mb-v7H" secondAttribute="centerX" id="4KN-Eq-Vgu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Eex-Mb-v7H" secondAttribute="trailing" constant="18" id="D3h-DP-bWe"/>
-                            <constraint firstItem="mz9-ea-z3c" firstAttribute="bottom" secondItem="t0q-WH-drH" secondAttribute="bottomMargin" id="NSE-VS-YdA"/>
-                            <constraint firstItem="aOA-pr-HUc" firstAttribute="bottom" secondItem="mz9-ea-z3c" secondAttribute="bottom" id="UPP-g3-tdy"/>
-                            <constraint firstItem="Eex-Mb-v7H" firstAttribute="leading" secondItem="t0q-WH-drH" secondAttribute="leadingMargin" constant="19" id="jem-LA-7aO"/>
-                            <constraint firstItem="mz9-ea-z3c" firstAttribute="top" secondItem="t0q-WH-drH" secondAttribute="topMargin" id="kbg-PF-3t0"/>
-                            <constraint firstItem="mz9-ea-z3c" firstAttribute="centerX" secondItem="Eex-Mb-v7H" secondAttribute="centerX" id="lgX-vA-7XI"/>
-                            <constraint firstItem="Eex-Mb-v7H" firstAttribute="top" secondItem="Vap-2t-eMD" secondAttribute="bottom" constant="8" symbolic="YES" id="mdj-X8-4lW"/>
-                            <constraint firstItem="mz9-ea-z3c" firstAttribute="leading" secondItem="t0q-WH-drH" secondAttribute="leadingMargin" constant="-20" id="pta-8A-zpm"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="mmT-6b-CJc" secondAttribute="bottom" id="B4Q-qM-NU8"/>
+                            <constraint firstItem="mz9-ea-z3c" firstAttribute="bottom" secondItem="Y7M-1F-Swh" secondAttribute="top" id="G1k-qG-CQh"/>
+                            <constraint firstItem="mz9-ea-z3c" firstAttribute="leading" secondItem="t0q-WH-drH" secondAttribute="leadingMargin" constant="-20" id="h54-9L-Qey"/>
+                            <constraint firstItem="Eex-Mb-v7H" firstAttribute="top" secondItem="Vap-2t-eMD" secondAttribute="bottom" constant="8" symbolic="YES" id="i81-mn-TaP"/>
+                            <constraint firstItem="mz9-ea-z3c" firstAttribute="top" secondItem="Vap-2t-eMD" secondAttribute="bottom" id="oPf-he-2Ra"/>
+                            <constraint firstItem="Eex-Mb-v7H" firstAttribute="leading" secondItem="t0q-WH-drH" secondAttribute="leadingMargin" constant="19" id="ows-9z-s8m"/>
+                            <constraint firstItem="mmT-6b-CJc" firstAttribute="leading" secondItem="t0q-WH-drH" secondAttribute="leading" id="sSe-hT-MiN"/>
+                            <constraint firstItem="Eex-Mb-v7H" firstAttribute="centerX" secondItem="mz9-ea-z3c" secondAttribute="centerX" id="vqo-A4-FlA"/>
+                            <constraint firstItem="Eex-Mb-v7H" firstAttribute="centerX" secondItem="t0q-WH-drH" secondAttribute="centerX" id="vto-7k-lw4"/>
                         </constraints>
                     </view>
                     <toolbarItems>
@@ -266,7 +263,6 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="ads" destination="aOA-pr-HUc" id="3eJ-ig-1Su"/>
                         <outlet property="scrollView" destination="mz9-ea-z3c" id="PR4-bV-Uso"/>
                         <outlet property="segment" destination="Eex-Mb-v7H" id="kAn-5V-kHR"/>
                         <outlet property="sidebarButton" destination="imq-PK-QDI" id="TmP-CC-jE3"/>
@@ -274,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMf-KZ-Z20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144" y="-327"/>
+            <point key="canvasLocation" x="96" y="-315"/>
         </scene>
         <!--Sidebar-->
         <scene sceneID="hs4-iW-Lpd">
@@ -366,25 +362,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="remove ads" id="Ui1-uA-thF">
-                                <rect key="frame" x="0.0" y="198" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ui1-uA-thF" id="G0f-GN-sPC">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remove Ads" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H2A-qj-Vog">
-                                            <rect key="frame" x="8" y="11" width="304" height="21"/>
-                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="25"/>
-                                            <color key="textColor" red="1" green="0.54118653819999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="9Vw-TU-2Nq" kind="modal" id="0tb-AA-KZG"/>
-                                </connections>
-                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="vLD-1K-fxl" id="4wP-Kt-pH6"/>
@@ -401,6 +378,6 @@
         <image name="menu.png" width="28" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TQn-Iv-zbY"/>
+        <segue reference="waS-Yr-oad"/>
     </inferredMetricsTieBreakers>
 </document>
